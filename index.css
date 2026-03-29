@@ -103,8 +103,7 @@
         }
 
         /* Hero Section */
-        .hero {
-           background-image: url("fon31.jpg");
+        .hero {background-image: url("fon31.jpg");
             background-size: cover;
             background-position: center;
             color: white;
