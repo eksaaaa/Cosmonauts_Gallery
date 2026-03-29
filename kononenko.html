@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Олег Дмитриевич Кононенко</title>
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+             --черный: #0B1838;
+            --фиолетовый: #f8acd6;
+            --синий: #3a60a0;
+            --голубой: #88a5e0;
+            --светл: #c8ddf5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --primary-color: #0b3d91;
+            --secondary-color: #fc3d21;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--розовый);
+            line-height: 1.6;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+/* Hero Section */
+        .hero {
+           background-image: url("images/fon31.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 60px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--фиолетовый);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .btn:hover {
+            background-color: var(--голубой);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+/* Astronauts Section */
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            position: relative;
+        }
+        
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--фиолетовый);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+/*Bio*/
+.astronaut-info {
+    margin: 60px 0;
+}
+.hapend li {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+   }
+.hapend li span {
+    color: var(--черный);
+            font-size: 1.1rem;
+}
+.astronaut-info h1{
+            color: var(--dark-color);
+            text-align: center;
+            font-size: 2.5rem;
+            position: relative;
+        }
+.astronaut-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+.astronaut-info p {
+            color: var(--черный);
+            font-size: 1.1rem;
+            margin-bottom: 15px
+        }
+
+/*Slider*/
+        .slider {
+            width: 1200px; 
+            overflow: hidden; 
+            position: relative;
+            
+        }
+        .slides {
+            display: flex; 
+            width: 300%; 
+            transition: transform 0.5s ease-in-out; 
+        }
+        .slide {
+            width: 100%; 
+            flex-shrink: 0;
+            
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        #slide1:checked ~ .slides { transform: translateX(0%); }   
+        #slide2:checked ~ .slides { transform: translateX(-100%); } 
+        #slide3:checked ~ .slides { transform: translateX(-200%); } 
+        #slide4:checked ~ .slides { transform: translateX(-300%); } 
+        #slide5:checked ~ .slides { transform: translateX(-400%); } 
+        .controls {
+            text-align: center; 
+            margin-top: 10px;
+        }
+
+        .controls label {
+            display: inline-block; 
+            width: 15px; 
+            height: 15px;
+            background: var(--голубой);
+            border-radius: 50%; 
+            margin: 5px; 
+            cursor: pointer; 
+        }
+
+        input:checked + label {
+            background: var(--фиолетовый);
+        }
+/* Header */
+        header {
+            background: linear-gradient(135deg, var(--черный) 0%, var(--голубой) 100%);
+            color: var(--светл);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: var(--фиолетовый);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--фиолетовый);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--фиолетовый);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+/* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            color: var(--фиолетовый);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-column p {
+            color: #aaa;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--фиолетовый);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .astronauts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>ГАЛЕРЕЯ РОССИЙСКИХ КОСМОНАВТОВ</span>
+            </div>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#astronauts">Фотографии</a></li>
+                    <li><a href="#bio">Биография</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Биография Кононенко</h2>
+            <p>Тысяча дней над Землей: История абсолютного рекордсмена</p>
+            <a href="#bio" class="btn">Исследовать биографию</a>
+            <a href="index.html" class="btn">Вернуться к карточкам</a>
+        </div>
+    </section>
+     <!-- Astronauts Section -->
+    <section class="container" id="astronauts">
+        <section class="section-title" id="astronauts">
+            <h1>Антарес</h1>
+            <p></p>
+        </section>
+                <div class="slider">
+
+                    <input type="radio" name="slider" id="slide1" checked> 
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+                    <input type="radio" name="slider" id="slide5">
+                    <div class="slides">
+                        <div class="slide"><img src= "images/kononenko5.jpg" alt="Олег Кононенко" width="1200" ></div>
+                        <div class="slide"><img src= "images/kononenko2.jpg" alt="Олег Кононенко" width="1200"></div>
+                        <div class="slide"><img src= "images/kononenko3.jpg" alt="Олег Кононенко" width="1200"></div>
+                        <div class="slide"><img src= "images/kononenko4.jpg" alt="Олег Кононенко" width="1200"></div>
+                        <div class="slide"><img src= "images/kononenko1.jpg" alt="Олег Кононенко" width="1200"></div>
+                    </div>
+                    <div class="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                        <label for="slide5"></label>
+                    </div>
+                </div>
+                <div class="astronaut-info">
+                <section class="bio" id="bio">
+                <h1>Олег Дмитриевич Кононенко</h1>
+                </section>
+                    <h3>Детство и ранние годы</h3>
+                    <p>Олег Кононенко родился 21 июня 1964 года в городе Чарджоу (ныне Туркменабат) Туркменской ССР.  </p>
+                    <p>Семья жила скромно, в обычном рабочем районе. Родители воспитывали Олега в строгости, прививая ему дисциплину и уважение к труду.</p>
+                    <p>Олег учился в средней школе №15 города Чарджоу. С ранних лет он проявлял интерес к технике и авиации.
+                    <p>• Увлечения: В школьные годы он серьезно занимался спортом — волейболом (был капитаном юношеской сборной Туркмении) и авиамоделированием. </p>
+                    <p>• Мечта: О космосе Олег мечтал с детства. В то время как многие сверстники бросали эту идею, он целенаправленно готовился к ней: хорошо учился, налегал на физику и математику, занимался физкультурой. </p>
+                    <p>После окончания школы в 1982 году он отправился в Харьков, чтобы поступить в один из лучших авиационных вузов того времени. </p>
+                    <p>В 1988 году он окончил институт по специальности «Двигатели летательных аппаратов» с квалификацией «инженер-механик».</p>
+                    <p>Сразу после окончания института в 1988 году он получил распределение в Куйбышев (ныне Самара) в Центральное специализированное конструкторское бюро (ЦСКБ-Прогресс). Там он прошел путь от инженера до ведущего инженера-конструктора, занимаясь проектированием систем энергопитания для космических аппаратов. Именно работа в Самаре стала для него «трамплином» в отряд космонавтов, куда он был зачислен в 1996 году.</p>
+                    <h3>Исторический полет</h3>
+                    <p>Первый полет Олега Кононенко состоялся 8 апреля 2008 года на корабле «Союз ТМА-12» к Международной космической станции (МКС). Он отправился на орбиту в качестве бортинженера 17-й основной экспедиции.</p>
+                    
+                    <h3>Что произошло во время исторического полета «Востока-1»:</h3>
+                    <p>Этот полет запомнился уникальной и крайне опасной операцией в открытом космосе:</p>
+                    <div class="hapend">
+                        <ol>
+                        <li><span>Проблема с пироболтами: Предыдущие посадки кораблей «Союз» (ТМА-10 и ТМА-11) проходили по жесткому «баллистическому спуску» из-за того, что один из пироболтов не срабатывал и отсеки корабля не разделялись вовремя.</span></li>
+                        <li><span>Рискованный выход: Чтобы выяснить причину, Кононенко и Сергей Волков совершили внеплановый выход в открытый космос (июль 2008 г.). Им пришлось вскрывать экранно-вакуумную изоляцию корабля «Союз» и вручную извлекать неисправный пироболт. </span></li>
+                        <li><span>Опасность: Работа с боевым пиротехническим устройством в условиях космоса была сопряжена с колоссальным риском взрыва, но космонавты успешно справились, обеспечив безопасное возвращение экипажа на Землю.</span></li>
+                    </div>
+                    <h3>Карьера после полета</h3>
+                    <p>После своего первого триумфального полета карьера Олега Кононенко развивалась стремительно:</p>
+                    <p>Он совершил еще 4 полета (всего 5 экспедиций на МКС). Каждый полет длился около полугода.</p>
+                    <p>В феврале 2024 года Олег Кононенко побил мировой рекорд Геннадия Падалки по суммарному налёту (878 суток). К июню 2024 года он стал первым человеком в истории, набравшим 1000 суток в космосе. К моменту завершения его пятой миссии (сентябрь 2024 года) его суммарный стаж составил 1110 суток. </p>
+                    <p>Руководящие должности: В 2016 году он был назначен инструктором-космонавтом-испытателем 1-го класса, а позже стал Командиром отряда космонавтов Роскосмоса.</p>
+                    <p>Деятельность сегодня: Кононенко продолжает работать в Центре подготовки космонавтов, передавая опыт молодым поколениям и участвуя в разработке новых космических программ. </p>
+        </div>
+            <a href="index.html" class="btn">Вернуться к карточкам</a>
+        
+    </section>
+
+
+<!-- Footer -->
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Космические герои</h3>
+                    <p>Проект, посвящённый исследователям космоса, их достижениям и вкладу в развитие человечества.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#astronauts">Фотографии</a></li>
+                    <li><a href="#bio">Биография</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +7 917 045 03 77</li>
+                        <li><i class="fas fa-envelope"></i>Ибрагимова Малика</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p> 2026 "Галерея космонавтов".</p>
+            </div>
+        </div>
+    </footer>
+            
+        
+</body>
+</html>

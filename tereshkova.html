@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валентина Владимировна Терешкова</title>
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+             --черный: #0B1838;
+            --фиолетовый: #f8acd6;
+            --синий: #3a60a0;
+            --голубой: #88a5e0;
+            --светл: #c8ddf5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --primary-color: #0b3d91;
+            --secondary-color: #fc3d21;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--розовый);
+            line-height: 1.6;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+/* Hero Section */
+        .hero {
+           background-image: url("images/fon31.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 60px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--фиолетовый);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .btn:hover {
+            background-color: var(--голубой);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+/* Astronauts Section */
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            position: relative;
+        }
+        
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--фиолетовый);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+/*Bio*/
+.astronaut-info {
+    margin: 60px 0;
+}
+.hapend li {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+   }
+.hapend li span {
+    color: var(--черный);
+            font-size: 1.1rem;
+}
+.astronaut-info h1{
+            color: var(--dark-color);
+            text-align: center;
+            font-size: 2.5rem;
+            position: relative;
+        }
+.astronaut-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+.astronaut-info p {
+            color: var(--черный);
+            font-size: 1.1rem;
+            margin-bottom: 15px
+        }
+
+/*Slider*/
+        .slider {
+            width: 1200px; 
+            overflow: hidden; 
+            position: relative;
+            
+        }
+        .slides {
+            display: flex; 
+            width: 300%; 
+            transition: transform 0.5s ease-in-out; 
+        }
+        .slide {
+            width: 100%; 
+            flex-shrink: 0;
+            
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        #slide1:checked ~ .slides { transform: translateX(0%); }   
+        #slide2:checked ~ .slides { transform: translateX(-100%); } 
+        #slide3:checked ~ .slides { transform: translateX(-200%); } 
+        #slide4:checked ~ .slides { transform: translateX(-300%); } 
+        #slide5:checked ~ .slides { transform: translateX(-400%); } 
+        .controls {
+            text-align: center; 
+            margin-top: 10px;
+        }
+
+        .controls label {
+            display: inline-block; 
+            width: 15px; 
+            height: 15px;
+            background: var(--голубой);
+            border-radius: 50%; 
+            margin: 5px; 
+            cursor: pointer; 
+        }
+
+        input:checked + label {
+            background: var(--фиолетовый);
+        }
+/* Header */
+        header {
+            background: linear-gradient(135deg, var(--черный) 0%, var(--голубой) 100%);
+            color: var(--светл);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: var(--фиолетовый);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--фиолетовый);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--фиолетовый);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+/* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            color: var(--фиолетовый);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-column p {
+            color: #aaa;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--фиолетовый);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .astronauts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>ГАЛЕРЕЯ РОССИЙСКИХ КОСМОНАВТОВ</span>
+            </div>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#astronauts">Фотографии</a></li>
+                    <li><a href="#bio">Биография</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Биография Терешковой</h2>
+            <p>Когда-то она была обычной ткачихой, которая увлекалась парашютным спортом. Но «космическая гонка» подарила ей шанс кардинально изменить жизнь
+</p>
+            <a href="#bio" class="btn">Исследовать биографию</a>
+            <a href="index.html" class="btn">Вернуться к карточкам</a>
+        </div>
+    </section>
+     <!-- Astronauts Section -->
+    <section class="container" id="astronauts">
+        <section class="section-title" id="astronauts">
+            <h1>Чайка</h1>
+            <p></p>
+        </section>
+                <div class="slider">
+
+                    <input type="radio" name="slider" id="slide1" checked> 
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+                    <input type="radio" name="slider" id="slide5">
+                    <div class="slides">
+                        <div class="slide"><img src= "images/tereshkova1.jpg" alt="Валентина Терешкова" width="1200" ></div>
+                        <div class="slide"><img src= "images/tereshkova2.jpg" alt="Валентина Терешкова" width="1200"></div>
+                        <div class="slide"><img src= "images/tereshkova3.jpg" alt="Валентина Терешкова" width="1200"></div>
+                        <div class="slide"><img src= "images/tereshkova4.jpg" alt="Валентина Терешкова" width="1200"></div>
+                        <div class="slide"><img src= "images/tereshkova5.jpg" alt="Валентина Терешкова" width="1200"></div>
+                    </div>
+                    <div class="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                        <label for="slide5"></label>
+                    </div>
+                </div>
+                <div class="astronaut-info">
+                <section class="bio" id="bio">
+                <h1>Валентина Владимировна Терешкова</h1>
+                </section>
+                    <h3>Детство и ранние годы</h3>
+
+                    <p>Терешкова родилась 6 марта 1937 года в деревне Большое Масленниково в Ярославской области в крестьянской семье выходцев из Белоруссии. Отец Владимир Аксенович Терешков был родом из Могилевской области, мать Елена Федоровна Терешкова (Круглова) — из Витебской. «Мои прадедушка и прабабушка в начале века, когда голод гнал народ в Центральную Россию, приехали в Ярославскую губернию и построили там дома», — рассказывала Терешкова. По ее словам, в их семье Белоруссия была особо любима. «Многие годы мою маму и меня связывала очень тесная дружба с Петром Мироновичем Машеровым (первый секретарь ЦК Компартии Белоруссии в 1960-х годах. — РБК). Когда я прилетаю в Минск, первое, что я делаю, — я иду на кладбище, чтобы поклониться этому удивительному человеку», — говорила Терешкова. </p>
+                    <p>Отец работал трактористом. Когда Терешковой было два года, его призвали на фронт танкистом. Погиб в ходе Советско-финской войны. Елене Терешковой тогда было 26 лет, она с тремя детьми уехала в Ярославль. После Великой Отечественной войны она работала на ярославском комбинате «Красный Перекоп».</p>
+                    <p>Там в 1953 году Терешкова окончила семь классов средней школы № 32, в 1955-м — 8-й и 9-й классы школы рабочей молодежи № 10. Параллельно с учебой работала закройщицей на Ярославском шинном заводе. </p>
+                    <p>В 1955–1960 годах училась в Ярославском заочном техникуме легкой промышленности на техника-технолога по хлопкопрядению. Одновременно работала ровничницей на комбинате технических тканей «Красный Перекоп» в ленторовничном цехе. По окончании техникума стажировалась в ремонтно-механическом цехе фабрики № 2. </p>
+                    <p>В 1959 году Терешкова попала в местный аэроклуб, где стала заниматься парашютным спортом. В то время она выполнила 90 прыжков с парашютом. Кроме того, Терешкова несколько лет занимала должность освобожденного (то есть занятого на производстве только общественной работой) секретаря ВЛКСМ на «Красном Перекопе».</p>
+                    
+                    <h3>Первый полет женщины в космос</h3>
+
+                    <p>14 июня 1963 года стартовал корабль «Восток-5» с Валерием Быковским на борту, а через два дня, 16 июня в 12:30 мск, — корабль «Восток-6», пилотируемый Терешковой. Ее позывной был Чайка, его — Ястреб.</p>
+                    <p>В первые сутки полета, по словам Терешковой, она обнаружила неполадку, о которой доложила Земле. «Ошибка заключалась в том, что на спуске программа была запланирована не сталкивать космический корабль с орбиты, настроена не на приземление, а на подъем орбиты. Я получила новые данные, внесла их, и все нормально прошло», — рассказывала космонавт.</p>
+                    <p>Полет Терешковой продлился двое суток 22 часа и 50 минут, корабль совершил 48 витков вокруг Земли. Рекорд Чайки и Ястреба до сих пор не побит. Терешкова стала не только первой женщиной в космосе — она единственная совершила одиночный полет. Рекорд одиночной почти пятисуточной космической миссии Быковского также не побит.</p>
+                    
+                    <h3>Что произошло во время полета «Востока-6»:</h3>
+                    <div class="hapend">
+                        <ol>
+                        <li><span>Корабль стартовал с космодрома Байконур в 12:30 по московскому времени.</span></li>
+                        <li><span>Перед стартом Терешкова произнесла фразу «Эй! Небо! Сними шляпу!» — цитату из поэмы В. Маяковского «Облако в штанах».</span></li>
+                        <li><span>В ходе полёта Терешкова вела киносъёмку Земли и Луны.</span></li>
+                        <li><span>Терешкова провела в космосе почти трое суток и совершила 48 витков вокруг Земли.</span></li>
+                        <li><span>Полёт Терешковой стал отправной точкой для развития космической медицины и гендерных исследований. </span></li>
+                        <li><span>Терешкова установила рекорды: стала первой женщиной-космонавтом в мире, самой молодой женщиной, побывавшей в космосе, единственной женщиной, совершившей полёт в одиночку.</span></li>
+                        </ol>
+                    </div>
+                    
+                        <h3>Карьера после полета </h3>
+
+                    <p>Карьера Валентины Терешковой после полёта в космос включала различные этапы, связанные с общественной и политической деятельностью.</p>
+                    <p>В отряде космонавтов Терешкова с 1969 по 1997 год работала инструктором и покинула его последней из женского набора 1962 года в связи с достижением предельного возраста. При этом осталась работать в Центре подготовки космонавтов им. Ю. А. Гагарина в качестве старшего научного сотрудника.</p>
+                    <p>В женских и общественных организациях Терешкова занимала разные должности, например:</p>
+                    <div class="hapend">
+                        <li><span>С 1968 по 1987 год возглавляла Комитет советских женщин;</span></li>
+                        <li><span>В 1969 году стала вице-президентом Международной демократической федерации женщин;</span></li>
+                        <li><span>Одновременно входила во Всемирный совет мира;</span></li>
+                        <li><span>Являлась членом КПСС (с 1962 года), членом ЦК КПСС (1971–1990), делегатом XXIV, XXV, XXVI и XXVII съездов партии.</span></li>
+                    </div>
+                        <p>В постсоветские годы Терешкова участвовала в национальных и международных платформах, связанных с наукой, образованием, патриотическим воспитанием, межпарламентскими и культурными контактами. </p>
+
+        
+        </div>
+            <a href="index.html" class="btn">Вернуться к карточкам</a>
+        
+    </section>
+
+
+<!-- Footer -->
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Космические герои</h3>
+                    <p>Проект, посвящённый исследователям космоса, их достижениям и вкладу в развитие человечества.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#astronauts">Фотографии</a></li>
+                    <li><a href="#bio">Биография</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +7 917 045 03 77</li>
+                        <li><i class="fas fa-envelope"></i>Ибрагимова Малика</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p> 2026 "Галерея космонавтов".</p>
+            </div>
+        </div>
+    </footer>
+            
+        
+</body>
+</html>
